@@ -1,0 +1,62 @@
+#intro{
+    background-image: url('../../assets/images/intro_banner.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.intro-color{
+    background: rgba(255, 255, 255, 0.60);
+}
+
+.search-input{
+    font-size: 18px;
+    padding: 15px 10px;
+    border-radius: 30px;
+    border: 1px solid #2D0E4E !important;
+    height: 55px
+}
+
+.search-button{
+    background: var(--primary-color);
+    padding: 20px 25px;
+    height: 55px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.search-button:hover{
+    background: var(--primary-color) !important;
+}
+
+.filialsdata > * {
+        flex: 1 1 calc(20% - 10px);
+        max-width: calc(24% - 10px);
+        box-sizing: border-box;    
+}
+
+  @media (max-width: 1224px) {
+        .filialsdata > * {
+            flex: 1 1 calc(30% - 10px); 
+            max-width: calc(30% - 10px);
+        }
+    }
+
+     @media (max-width: 1024px) {
+        .filialsdata > * {
+            flex: 1 1 calc(48% - 10px); 
+            max-width: calc(48% - 10px);
+        }
+    }
+
+
+     @media (max-width: 700px) {
+        .filialsdata > * {
+            flex: 1 1 100%; 
+            max-width: calc(100% - 10px);
+        }
+    }

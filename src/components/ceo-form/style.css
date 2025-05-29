@@ -1,0 +1,10 @@
+.addCenterBtn{
+    background: #ad81d1;
+    border: 1px solid #ad81d1;
+    font-weight: 600;
+}
+
+.addCenterBtn:hover{
+    background: #ad81d1 !important;
+    border: 1px solid #ad81d1 !important;
+}

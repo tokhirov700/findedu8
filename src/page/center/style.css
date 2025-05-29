@@ -1,0 +1,103 @@
+#center{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.goback{
+    color: var(--primary-color);
+    transition: all 0.1s linear;
+}
+
+.goback:hover{
+    color: #2d0e4eb1
+}
+
+.plan_service{
+    background: var(--primary-color);
+    font-size: 20px;
+    padding: 22px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.plan_service:hover{
+    background: var(--primary-color) !important;
+}
+
+.coment{
+    outline: black;
+    border: 1px solid silver;
+    font-size: 16px;
+}
+
+.coment:hover{
+    border: 1px solid silver !important;
+}
+
+.ButtonComment{
+    font-size: 15px;
+    width: 100%;
+    max-width: 150px;
+    height: 40px;
+    font-weight: 500;
+}
+
+.Disabled{
+    background: #C084FC !important;
+    color: white !important;
+}
+
+.Avtivated{
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
+.popoverBtn{
+    font-size: 17px;
+}
+
+.popoverBtn:first-child{
+    background: rgb(79, 63, 167);
+    border: 1px solid rgb(79, 63, 167);
+    color: white;
+}
+
+.popoverBtn:first-child:hover{
+    background: rgb(79, 63, 167) !important;
+    border: 1px solid rgb(79, 63, 167) !important;
+    color: white !important;
+}
+
+.popoverBtn:last-child{
+    color: black;
+    border: 1px solid rgb(79, 63, 167);
+}
+
+.popoverBtn:last-child:hover{
+    color: black !important;
+    border: 1px solid rgb(79, 63, 167) !important;
+}
+
+
+.btnEditCommit:last-child{
+    background: #C084FC;
+    border: 1px solid #C084FC;
+}
+
+.btnEditCommit:last-child:hover{
+    background: #C084FC !important;
+    border: 1px solid #C084FC !important;
+}
+
+.btnEditCommit:first-child{
+    border: 1px solid #C084FC;
+}
+
+.btnEditCommit:first-child:hover{
+    border: 1px solid #C084FC !important;
+    color: #C084FC !important;
+}
+
+.activeCourse{
+    border: 2px solid var(--primary-color) !important;
+}
