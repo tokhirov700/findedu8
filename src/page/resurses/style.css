@@ -1,0 +1,28 @@
+  .resurs-wrapper > * {
+        flex: 1 1 calc(30% - 10px);
+        max-width: calc(30% - 10px);
+        box-sizing: border-box;    
+}
+
+  
+  @media (max-width: 1224px) {
+        .resurs-wrapper > * {
+            flex: 1 1 calc(30% - 10px); 
+            max-width: calc(30% - 10px);
+        }
+    }
+
+     @media (max-width: 1024px) {
+        .resurs-wrapper > * {
+            flex: 1 1 calc(48% - 10px); 
+            max-width: calc(48% - 10px);
+        }
+    }
+
+
+     @media (max-width: 700px) {
+        .resurs-wrapper > * {
+            flex: 1 1 100%; 
+            max-width: calc(100% - 10px);
+        }
+    }

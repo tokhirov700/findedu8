@@ -1,0 +1,9 @@
+.filialCard{
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    transition: all 0.1s linear;
+}
+
+.filialCard:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
