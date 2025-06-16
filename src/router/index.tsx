@@ -1,7 +1,7 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import App from "../App";
 import MainLayout from "@/Layout/MainLayout";
-import { Home, Login, Otp, Register, Center, Branches, Resources, CEO, Profile, Fovorites, Reseptions } from "@/page";
+import { Home, Login, Otp, Register, Center, Branches, Resources, CEO, Profile, Fovorites, Reseptions , About } from "@/page";
 import AutheLayout from "@/Layout/AuthLayout";
 
 
@@ -18,6 +18,7 @@ export default function Router(){
                     <Route path="/profile" element={<Profile/>}/>
                     <Route path="/favorites" element={<Fovorites/>}/>
                     <Route path="/reseptions" element={<Reseptions/>}/>
+                    <Route path="/about" element={<About/>}/>
 				</Route>
 				<Route element={<AutheLayout />}>
 					<Route path='/login' element={<Login />} />

@@ -81,7 +81,6 @@ const CenterForm = (props:props) => {
                         return  <Option key={i} value={e.id}>{e.name}</Option>
                       })
                     }
-                  {/* Qo‘shimcha regionlar */}
                 </Select>
               </Form.Item>
 

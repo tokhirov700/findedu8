@@ -9,5 +9,6 @@ import CEO from './ceo'
 import Profile from './profile'
 import Fovorites from './fovorites'
 import Reseptions from './reseptions'
+import About from './about'
 
-export {Home, Register, Login, Otp, Center, Branches, Resources, CEO, Profile, Fovorites, Reseptions}
+export {Home, Register, Login, Otp, Center, Branches, Resources, CEO, Profile, Fovorites, Reseptions , About}

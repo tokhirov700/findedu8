@@ -24,7 +24,7 @@ const Resurses = () => {
   const handleDelete = async (id: number) => {
   try {
     await http.delete(`/resources/${id}`);
-    getResources(); // O'chirgandan keyin ro'yxatni yangilash
+    getResources(); 
   } catch (error) {
     console.error("Resursni o'chirishda xatolik:", error);
   }

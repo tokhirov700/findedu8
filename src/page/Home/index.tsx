@@ -18,7 +18,7 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const {getMyUser} = isUser()
 
-  // Filter logic
+
  const filteredCenters = isCenterData.filter((center) => {
   const matchesSearch = searchTerm
     ? center.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -89,7 +89,6 @@ const Home = () => {
 
   return (
     <div className="w-full min-h-[80vh] mb-[100px]">
-      {/* Intro section */}
       <section id="intro" data-aos="fade-up" className="h-[450px] mt-[20px] relative mb-[50px]">
         <div className="intro-color h-full w-full absolute inset-0"></div>
         <div className="container relative z-2 pt-[150px] px-[10px]">
@@ -103,7 +102,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Search */}
       <section>
         <div className="max-w-[900px] w-full mx-auto flex gap-[30px] px-[10px] max-md:flex-wrap mb-[30px]">
           <Input
@@ -118,7 +116,6 @@ const Home = () => {
           </Button>
         </div>
 
-        {/* Tanlanganlar */}
         <div className="max-w-[900px] mx-auto px-[10px] mb-[30px]">
           <div className="flex flex-wrap gap-2 justify-center">
             {selectedMajors.map((major, i) => (
@@ -163,7 +160,6 @@ const Home = () => {
           </div>
         )}
 
-        {/* Data Cards */}
             {
               filteredCenters.length ?  <div className="container flex flex-wrap gap-x-[33px] gap-y-[40px] filialsdata px-[10px]">
             {filteredCenters.map((e, i: number) => (
@@ -175,7 +171,6 @@ const Home = () => {
             }
       </section>
 
-      {/* Modal */}
       <Modal
         footer={false}
         open={isModalOpen}
@@ -202,7 +197,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Regions */}
           <div className="w-[50%]">
             <h4 className="text-[22px] font-semibold mb-[10px]">
               Regionlarni tanlang

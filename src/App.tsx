@@ -11,9 +11,9 @@ function App() {
 	
 
 	useEffect(() => {
-		getMyUser() // Login qilgan User get qilinib olinadi
-		getCenters(); // CENTERS get qilinib olinyapti
-		getLikes() // Likes get qilib olinyapti
+		getMyUser() 
+		getCenters(); 
+		getLikes() 
 	}, [getCenters, getMyUser, getLikes])
 
 	return (

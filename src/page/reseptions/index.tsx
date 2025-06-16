@@ -4,9 +4,21 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import http from "@/config";
 
 const Reseptions = () => {
   const { MyUser, getMyUser } = isUser();
+
+
+  const handleDelete = async (id: number) => {
+    try {
+      await http.delete(`/reseption/${id}`);
+      getMyUser(); 
+    } catch (error) {
+      console.error("Navbatni o'chirishda xatolik:", error);
+    }
+  };
+
 
   const columns = [
     {
@@ -53,18 +65,30 @@ const Reseptions = () => {
       key: "course",
     },
     {
-      title: "Batafsil",
+      title: "Amallar",
       key: "action",
       render: (_: any, record: any) => (
-        <Link to={`/center/${record.centerId}`}>
-          <Button type="primary" size="small">Ko‘rish</Button>
-        </Link>
+        <div className="flex gap-2">
+          <Link to={`/center/${record.centerId}`}>
+            <Button type="primary" size="small">Ko‘rish</Button>
+          </Link>
+          <Button
+            type="default"
+            danger
+            size="small"
+            onClick={() => handleDelete(record.id)}
+          >
+            O‘chirish
+          </Button>
+        </div>
       ),
     },
   ];
 
+
   const dataSource = MyUser?.receptions?.map((e, index) => ({
     key: index,
+    id: e.id, 
     image: e.filial?.image,
     name: e.filial?.name,
     address: e.filial?.address,
@@ -75,17 +99,18 @@ const Reseptions = () => {
     centerId: e.centerId,
   })) || [];
 
+
   useEffect(() => {
-    getMyUser()
+    getMyUser();
     AOS.init({
       duration: 1500,
       once: true,
     });
-  }, [getMyUser]);
+  }, []);
 
   return (
     <div>
-      {/* Hero Section */}
+
       <section
         id="intro"
         data-aos="fade-up"
@@ -102,10 +127,9 @@ const Reseptions = () => {
         </div>
       </section>
 
-      {/* Table Section */}
       <div className="container px-4">
-         <div className="block md:hidden text-center text-sm text-gray-600 mb-2">
-            Jadvalni to‘liq ko‘rish uchun yon tomonga suring ⟶
+        <div className="block md:hidden text-center text-sm text-gray-600 mb-2">
+          Jadvalni to‘liq ko‘rish uchun yon tomonga suring ⟶
         </div>
 
         <div className="overflow-x-auto">

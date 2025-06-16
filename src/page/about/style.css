@@ -1,0 +1,9 @@
+#intro{
+    background-image: url('../../assets/images/intro_banner.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.intro-color{
+    background: rgba(255, 255, 255, 0.60);
+}

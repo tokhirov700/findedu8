@@ -12,7 +12,6 @@ const ProfileDropdown = () => {
     removeCookies('access_token')
     removeCookies('refresh_token')
     console.log("User logged out");
-    // masalan: removeCookies('access_token') va redirect
     navigate('/login');
   };
 

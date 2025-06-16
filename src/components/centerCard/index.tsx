@@ -39,16 +39,16 @@ const CenterCard = (props:props) => {
   setLoading(true)
   try {
     if (!isLiked) {
-      // Like qo'yish
+
       await http.post('/liked', {centerId: id})
       message.success('Sevimlilar safiga qo\'shildi', 2)
     } else {
-      // Like obyekti topiladi
+
       const likeObj = LikesData.find((like:any) => like.centerId === id && like.user.id === MyUser.id)
       if (!likeObj) {
         throw new Error("Like topilmadi")
       }
-      // Like ni o'chirish uchun o'sha likeObj.id yuboriladi
+
       await http.delete(`/liked/${likeObj.id}`)
       message.success('Like olindi', 2)
     }
