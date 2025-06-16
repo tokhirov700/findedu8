@@ -32,7 +32,6 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Navigation links */}
           <ul className="hidden md:flex gap-8 text-[#1E40AF] font-semibold text-lg select-none">
             <li><Link to="/" className="hover:text-[#2563EB] transition">{t('Bosh sahifa')}</Link></li>
             <li><Link to="/about" className="hover:text-[#2563EB] transition">{t('Biz haqimizda')}</Link></li>
@@ -44,9 +43,7 @@ const Header = () => {
             )}
           </ul>
 
-          {/* Right side */}
           <div className="flex items-center gap-4">
-            {/* Mobile menu toggle */}
             <div
               className="block md:hidden cursor-pointer p-2 rounded-md hover:text-[#1E40AF] transition"
               onClick={toggleMenu}
@@ -55,7 +52,6 @@ const Header = () => {
               <Menu className="text-[#1E40AF] w-6 h-6" />
             </div>
 
-            {/* Language selector */}
             <select
               value={lang}
               onChange={(e) => changeLang(e.target.value)}
