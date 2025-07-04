@@ -19,23 +19,12 @@ const ResursModal = ({ open, onClose, category = [], getResources }: any) => {
 
   const handleSubmit = async (values: any) => {
     try {
-      // const formData = new FormData();
-      // formData.append("categoryId", values.categoryId);
-      // formData.append("name", values.name);
-      // formData.append("description", values.description);
-      // formData.append("media", values.media);
-
-      // if (imageType === "url") {
-      //   formData.append("image", values.image_url);
-      // } else if (values.image_file?.file) {
-      //   formData.append("image", values.image_file.file);
-      // }
 
       await http.post("/resources", values);
       message.success("Resurs muvaffaqiyatli qo‘shildi!");
       form.resetFields();
       onClose();
-      getResources(); // listni yangilash
+      getResources(); 
     } catch (err) {
       console.error(err);
       message.error("Xatolik yuz berdi!");
